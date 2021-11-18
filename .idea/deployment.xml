@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="PublishConfigData" serverName="ssac" remoteFilesAllowedToDisappearOnAutoupload="false">
+    <serverData>
+      <paths name="ssac">
+        <serverdata>
+          <mappings>
+            <mapping deploy="/home/ubuntu/team_project" local="$PROJECT_DIR$" web="/" />
+          </mappings>
+        </serverdata>
+      </paths>
+    </serverData>
+  </component>
+</project>
