@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>요소수맵</title>
+    </head>
+    <body>
+        <!--<p id="data"></p> -->
+
+        <!-- <script>
+            const url = "https://api.odcloud.kr/api/15094782/v1/uddi:6b2017af-659d-437e-a549-c59788817675?page=1&perPage=100&Authorization=infuser";
+            const headers = { 'Authorization': 'Infuser ' + "cFsf2tLOdm9hmVUm2tsKHlJwty7UFo2qiSu7UTNQudNbeSMo2vpQ5p0m2tZqPoP5qrXWXNtTw6HeqGaTElLuDg==" };
+
+            const requestOptions = {
+            method: 'GET',
+            headers: headers
+            };
+
+            fetch(url, requestOptions)
+            .then(res => res.json())
+            .then(myJson => {
+                document.getElementById('data').innerText = JSON.stringify(myJson, null, 1);
+            })
+
+        </script> -->
+
+
+        <div id="map" style="width:100%;height:100vh;"></div>
+    
+        <script src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=6c059d1722b155f5bc6c9b1390101b5f&libraries=clusterer"></script> 
+        
+        <script>
+            const url = "https://api.odcloud.kr/api/15094782/v1/uddi:6b2017af-659d-437e-a549-c59788817675?page=1&perPage=109&Authorization=infuser";
+            const headers = { 'Authorization': 'Infuser ' + "cFsf2tLOdm9hmVUm2tsKHlJwty7UFo2qiSu7UTNQudNbeSMo2vpQ5p0m2tZqPoP5qrXWXNtTw6HeqGaTElLuDg==" };
+
+            const requestOptions = {
+            method: 'GET',
+            headers: headers
+            }; 
+
+            fetch(url, requestOptions)
+            .then(res => res.json())
+            .then(myJson => {
+                //document.getElementById('data').innerText = JSON.stringify(myJson, null, 1);
+                var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+                mapOption = {
+                    center: new kakao.maps.LatLng(36.46369351381241, 127.8468282697540), // 지도의 중심좌표(ssac 영캠) 
+                    level: 12, //12지도의 확대 레벨
+                    mapTypeId : kakao.maps.MapTypeId.ROADMAP // 지도종류
+                }; 
+    
+            // 지도를 생성한다 
+            var map = new kakao.maps.Map(mapContainer, mapOption); 
+
+            // 마커 클러스터러를 생성합니다 
+            var clusterer = new kakao.maps.MarkerClusterer({
+                map: map, // 마커들을 클러스터로 관리하고 표시할 지도 객체 
+                averageCenter: true, // 클러스터에 포함된 마커들의 평균 위치를 클러스터 마커 위치로 설정 
+                minLevel: 3 // 클러스터 할 최소 지도 레벨 
+            });
+
+            // 인포윈도우를 표시하는 클로저를 만드는 함수입니다 
+            function makeOverListener(map, marker, infowindow) {
+                return function() {
+                    infowindow.open(map, marker);
+                };
+            }
+
+            // 인포윈도우를 닫는 클로저를 만드는 함수입니다 
+            function makeOutListener(infowindow) {
+                return function() {
+                    infowindow.close();
+                };
+            }
+
+            //마커들을 묶을 변수 생성
+            var markers =[];
+
+            const data = myJson.data;
+
+            for (var i = 0; i < data.length; i++) {
+            
+                // 지도에 마커를 생성하고 표시한다
+                var marker = new kakao.maps.Marker({
+                position: new kakao.maps.LatLng(data[i]['위도'], data[i]['경도']), // 마커의 좌표
+                map: map // 마커를 표시할 지도 객체
+                });
+    
+                // 마커 위에 표시할 인포윈도우를 생성한다
+                var infowindow = new kakao.maps.InfoWindow({
+                    content :  '<p>' + '<h3>' +  data[i]['명칭'] + '</h3>' + '<br>' + "재고량 : " + data[i]["재고량"] + '<br>' + "주소 : " + data[i]["주소"] + '<br>' + "전화번호 :" + data[i]["전화번호"] + '</p>'    // 인포윈도우에 표시할 내용
+                });
+        
+                // 인포윈도우를 지도에 표시한다
+                //infowindow.open(map, marker);
+            
+                // 생성된 마커들이 markers 변수안에 들어감  
+                markers.push(marker);
+                kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
+                kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+                };
+
+            // 클러스터러에 마커들을 추가합니다
+            clusterer.addMarkers(markers);
+
+            // 인포윈도우를 표시하는 클로저를 만드는 함수입니다 
+            function makeOverListener(map, marker, infowindow) {
+                return function() {
+                    infowindow.open(map, marker);
+                };
+            }
+
+            // 인포윈도우를 닫는 클로저를 만드는 함수입니다 
+            function makeOutListener(infowindow) {
+                return function() {
+                    infowindow.close();
+                };
+            }
+            })   
+                
+        </script>
+    </body>
+</html>
