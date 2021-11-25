@@ -6,6 +6,7 @@ import imgC from './img_purpose_img03.gif';
 import imgD from './img_purpose_img04.gif';
 import imgE from './yososu_img02.jpeg';
 import imgF from './yososu_img03.png';
+import imgG from './yososu_img05.jpg';
 
 const InfoPage = () => {
 
@@ -67,6 +68,7 @@ const InfoPage = () => {
 
                 {/*두번째 탭 요소수 용도 시작*/}
                 <Tab eventKey="purpose" title="용도" className="mt-5">
+                    <h1 className="mt-5 mb-5">요소수 주요 용도</h1>
                     <Row>
                         <Col xs={6} md={3} className="m-0">
                             <Card border="dark" style={{ width: '100%' }} >
@@ -119,11 +121,34 @@ const InfoPage = () => {
                         </Col>
                     </Row>
                 </Tab>
-                <Tab eventKey="income" title="수입현황" >asdasd
-                </Tab>
-                <Tab eventKey="company" title="회사" >hhhhhh
+                {/*두번째 탭 요소수 용도 끝*/}
+
+                {/*세번째 탭 요소수 수입현황 시작*/}
+                <Tab eventKey="income" title="수입현황" >
+                    <h1 className="mt-5 mb-3">요소수 최근 수입현황</h1>
+                    <Row>
+                        <Col className="mt-5 ms-5">
+                            <img src={imgG} width={500} height={500}/>
+                        </Col>
+                        <Col className="mt-5">
+                            <h4 className="mt-5">
+                                한국에서 요소수는 롯데정밀화학, 휴켐스 등이 생산하고 있는데, 원료인 요소는 대부분 중국에서 들여온다.
+                                중국은 전 세계 요소의 30%를 생산한다. 중국이 요소 수출을 가장 많이 하는 국가 순위를 보면 1위 인도, 2위가 한국이다.
+                                한국에 수출하는 양은 56만4000톤, 중국 요소 수출 총량의 14%를 차지한다.
+                                한국은 전체 필요 요소수 중 66.1%를 중국에서 수입한다.
+                                특히 공업용 요소의 중국 수입 의존도는 지난해 80% 이상, 올해는 97.66%에 달한다.
+                                요소수 대란은 전 세계적 상황이지만, 중국에 전적으로 의존했던 우리나라는 직격타를 맞았다.
+                            </h4>
+                            <h5 className="mt-5">
+                                출처 : SBS 뉴스
+                            </h5>
+                            <hr/>
+                        </Col>
+                    </Row>
                 </Tab>
             </Tabs>
+            {/*세번째 탭 요소수 수입현황 끝*/}
+            
             {/*탭기능 구현 내가한거 끝*/}
 
 
