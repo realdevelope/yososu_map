@@ -1,7 +1,47 @@
-#Member1 .SocialIconHide{
-    display: none;
+.MemberInfo .Member{
+    border: 1px solid gray;
+    text-align: center;
+    box-sizing: border-box;
 }
 
-#Member3 .SocialIconHide{
+.MemberInfo .MemberImg{
+    position: relative;
+    overflow: hidden;
+}
+
+.MemberInfo .SocialIcon{
     display: none;
+    background-color: rgba(105, 105, 105, 50%);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 700;
+    transition: background-color 2s;
+}
+
+
+.MemberInfo .SocialIcon ul{
+    list-style-type: none;
+    padding-left: 0;
+    display: flex;
+    justify-content: center;
+    margin: 5px;
+}
+
+.MemberInfo .SocialIcon .Icon{
+    text-align: center;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 500;
+}
+
+.MemberInfo .discribe ul{
+    list-style-type: none;
+    padding-left: 0;
+
 }

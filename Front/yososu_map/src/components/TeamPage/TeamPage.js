@@ -39,27 +39,61 @@ const TeamPage = () => {
   ]
 
   const renderInfo = memberInfo.map(info =>{
+
+    const showIcon = (props) =>{
+      console.log(props);
+      if(props === info.id){
+        console.log(document.getElementById(`Member${props}`));
+        document.getElementById(`Member${props}`).style.display = 'block';
+      }
+    }
+
+    const hideIcon = (props) =>{
+      if(props === info.id){
+        document.getElementById(`Member${props}`).style.display = 'none';
+      }
+    }
+
     return(
-        <div className="Member" key = {info.id}>
+        <div className="col-lg-3 col-md-6 col-sm-12 p-4" key = {info.id}>
+          <div className="Member">
           <div className="MemberImg"
             onMouseEnter={(event)=>{
               setIsHovering(true);
+              showIcon(info.id);
             }}
-            onMouseLeave={()=>setIsHovering(false)}>
+            onMouseLeave={(event)=>{
+              setIsHovering(false);
+              hideIcon(info.id);
+            }}>
             <a href = "#">
               <img src={info.memoticon} width="200" />
             </a>
-            <div id = {`Member${info.id}`}>
-              <div className={`TeamPage ${isHovering ? 'SocialIcon' : 'SocialIconHide'}`}>
-              dfdfddfas;jklfal;ksdhfaldfjalk;fhal;kshs
+            <div id = {`Member${info.id}`} className="SocialIcon">
+              <div>
+                <div className="Icon">
+                  <ul>
+                    <li>
+                      <a id = "GithubSrc" href={info.github}>
+                        <img className="github mx-2" src = "img/github_white.png" width="30px" />
+                      </a>
+                    </li>
+                    <li>
+                      <a id = "VelogSrc" href={info.velog} target="_blank">
+                        <img className="velog mx-2" src = "img/velog_white.png" width="30px" />
+                      </a>
+                    </li>
+                  </ul>
+                </div>
               </div>
             </div>
           </div>
-          <div className = "discription">
+          <div className = "discribe my-3">
             <ul>
               <li>{info.name}</li>
               <li>{info.roll}</li>
             </ul>
+          </div>
           </div>
         </div>
     )
@@ -68,8 +102,10 @@ const TeamPage = () => {
   return (
     <div>
       <h2>Our Team Member</h2>
-      <div className="MemberInfo d-flex">
-        {renderInfo}
+      <div className="MemberInfo my-4">
+        <div className="row">
+          {renderInfo}
+        </div>
       </div>
     </div>
   )
