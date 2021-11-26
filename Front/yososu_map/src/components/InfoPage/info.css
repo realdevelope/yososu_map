@@ -1,0 +1,26 @@
+.income_img {
+    border-radius: 30px;
+    height: 650px;
+    width: 100%;
+}
+.income_img2 {
+    border-radius: 30px;
+    width: 100%;
+}
+.yososu_reason_section {
+    border: dashed 2px;
+    border-radius: 30px;
+    height: 650px;
+    width: 100%;
+}
+
+@font-face {
+    font-family: 'IBMPlexSansKR-Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+div{
+    font-family: 'IBMPlexSansKR-Regular';
+}

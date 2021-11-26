@@ -1,4 +1,5 @@
 import React from 'react';
+import InfoPage from './components/InfoPage/InfoPage';
 import MapPage from './components/MapPage/MapPage';
 import TeamPage from './components/TeamPage/TeamPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -14,11 +15,12 @@ function App() {
         <Row>
           <Col>
               <MainPage/>
-            <MapPage/>
-            <TeamPage/>
+              <MapPage/>
+              <InfoPage/>
+              <TeamPage/>
+              <Footer/>
           </Col>
         </Row>
-          <Footer/>
       </Container>
     </div>
   );
