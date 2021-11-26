@@ -95,8 +95,8 @@ const TeamPage = () => {
           </div>
           <div className = "discribe my-3">
             <ul>
-              <li>{info.name}</li>
-              <li>{info.roll}</li>
+              <li className="m-2 Title">💎 {info.name}</li>
+              <li className="m-2">💻 {info.roll}</li>
             </ul>
           </div>
           </div>
@@ -106,7 +106,7 @@ const TeamPage = () => {
 
   return (
     <div>
-      <h2>Our Team Member</h2>
+      <h2 className="Title m-3">"Our Team Member"</h2>
       <div className="MemberInfo my-4">
         <div className="row">
           {renderInfo}

@@ -1,4 +1,23 @@
+@font-face {
+    font-family: 'EliceDigitalBaeum_Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'EliceDigitalBaeum_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+.Title{
+    font-family: 'EliceDigitalBaeum_Bold';
+    text-align: center;
+}
+
 .MemberInfo .Member{
+    font-family: 'EliceDigitalBaeum_Regular';
     border: 1px solid gray;
     text-align: center;
     box-sizing: border-box;
@@ -9,12 +28,11 @@
 .MemberInfo .MemberImg{
     position: relative;
     overflow: hidden;
-
 }
 
 .MemberInfo .SocialIcon{
     opacity: 0;
-    background-color: rgba(105, 105, 105, 50%);
+    background-color: rgba(105, 105, 105, 60%);
     border-radius: 10px 10px 0 0;
     width: 100%;
     height: 100%;
@@ -23,7 +41,7 @@
     left: 50%;
     transform: translate(-50%, -50%);
     z-index: 700;
-    transition : all .6s linear;
+    transition : all .8s linear;
 }
 
 .MemberInfo .SocialIcon ul{
