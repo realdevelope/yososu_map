@@ -1,6 +1,7 @@
 /*global kakao*/
 
 import axios from "axios";
+import { Row, Col, Container } from 'react-bootstrap'; 
 import React, { useEffect } from "react";
 const { kakao } = window;
 
@@ -67,7 +68,7 @@ const MapPage = () => {
         
                     // 마커 위에 표시할 인포윈도우를 생성한다
                     var infowindow = new kakao.maps.InfoWindow({
-                        content :  '<p>' + '<h3>' +  data[i]['명칭'] + '</h3>' + '<br>' + "재고량 : " + data[i]["재고량"] + '<br>' + "주소 : " + data[i]["주소"] + '<br>' + "전화번호 :" + data[i]["전화번호"] + '</p>'    // 인포윈도우에 표시할 내용
+                        content :  '<p style="padding-bottom:5px;">' + '<h4>' +  data[i]['명칭'] + '</h4>' + '<br>' + "재고량 : " + data[i]["재고량"]  +"개 " + "<br>" + "주소 : " + data[i]["주소"] + '<br>' + "전화번호 :" + data[i]["전화번호"] + '<br>'+'</p>'    // 인포윈도우에 표시할 내용
                     });
         
                     // 인포윈도우를 지도에 표시한다
@@ -100,7 +101,13 @@ const MapPage = () => {
 
     return (
         <div>
-            <div id="map" style={{ width: "1000px", height:"700px" }}> </div>
+            <Container>
+                <Row>
+                    <Col>
+                        <div id="map" style={{ width: "1280px", height:"700px" }}> </div>
+                    </Col>
+                </Row>
+            </Container>
         </div>
     )
 }
