@@ -5,6 +5,8 @@ import './TeamPage.css'
 const TeamPage = () => {
 
   const [isHovering, setIsHovering] = useState(false);
+  const [isGithub, setGithub] = useState(false);
+  const [isVelog, setVelog] = useState(false);
 
   const memberInfo = [
     {
@@ -43,14 +45,15 @@ const TeamPage = () => {
     const showIcon = (props) =>{
       console.log(props);
       if(props === info.id){
-        console.log(document.getElementById(`Member${props}`));
-        document.getElementById(`Member${props}`).style.display = 'block';
+        var target = document.getElementById(`Member${props}`);
+        target.style.opacity = '1';
+        console.log(target);
       }
     }
 
     const hideIcon = (props) =>{
       if(props === info.id){
-        document.getElementById(`Member${props}`).style.display = 'none';
+        document.getElementById(`Member${props}`).style.opacity = '0';
       }
     }
 
@@ -73,14 +76,16 @@ const TeamPage = () => {
               <div>
                 <div className="Icon">
                   <ul>
-                    <li>
-                      <a id = "GithubSrc" href={info.github}>
-                        <img className="github mx-2" src = "img/github_white.png" width="30px" />
+                    <li onMouseOver = {() => setGithub(true)}
+                        onMouseLeave= {() => setGithub(false)}>
+                      <a id = "GithubSrc" href={info.github} target="_blank">
+                        <img className="github mx-2" src ={isGithub ? "img/github_mouseover.png" : "img/github_white.png"} width="30px" />
                       </a>
                     </li>
-                    <li>
+                    <li onMouseOver = {() => setVelog(true)}
+                        onMouseLeave= {() => setVelog(false)}>
                       <a id = "VelogSrc" href={info.velog} target="_blank">
-                        <img className="velog mx-2" src = "img/velog_white.png" width="30px" />
+                        <img className="velog mx-2" src = {isVelog ? "img/velog_mouseover.png" : "img/velog_white.png" } width="30px" />
                       </a>
                     </li>
                   </ul>
