@@ -1,5 +1,6 @@
 import React from "react";
 import { Tabs, Tab, Row, Col, Nav, Card, Button } from 'react-bootstrap';
+import "./info.css";
 import imgA from './img_purpose_img01.gif';
 import imgB from './img_purpose_img02.gif';
 import imgC from './img_purpose_img03.gif';
@@ -25,7 +26,7 @@ const InfoPage = () => {
                 {/*첫번째 탭 요소수 정의 시작*/}
                 <Tab eventKey="meaning" title="요소수">
                     <Row>
-                        <Col className="mb-5'">
+                        <Col className="mb-5 ">
                             <h1 className="mt-5">요소수란?</h1>
                             <h5 className="mt-5">
                                 디젤 차량에서 발생하는 질소산화물(NOx)을 정화시키기 위해 디젤 차량에 탑재된
@@ -40,12 +41,12 @@ const InfoPage = () => {
                         </Col>
                         <hr />
 
-                        <Col className="mt-5">
-                            <img src={imgE} />
+                        <Col xs={12} md={6} className="mt-5">
+                            <img src={imgE} className="income_img"/>
                         </Col>
 
-                        <Col className="mt-5">
-                            <h1 className="my-5">요소수 품귀현상</h1>
+                        <Col xs={12} md={6} className="mt-5 yososu_reason_section">
+                            <h1>요소수 품귀현상</h1>
                             <h5>
                                 요소수 품귀 현상으로 평소 10리터에 1만원 하던 요소수가 최근에는 10만원을 지불해도 구하기 어려운 상황입니다.
                             자동차용 요소는 물론이고 심지어 농가마저도 요소 품귀에 현상에 따른 불안감이 극대화 되고 있습니다.
@@ -55,7 +56,7 @@ const InfoPage = () => {
                             코로나19 팬데믹으로 전국민이 경제적 고충을 호소하고 있는 상황에 물류 대란과 물가 상승까지 덮친다면
                                 헤어 나올 수 없는 위기에 빠질 수 있습니다.</h5>
                             <hr />
-                            <h2 className="my-3">이유</h2>
+                            <h2>이유</h2>
                             <h5>
                                 직접적으로 우리나라에서 쓰는 요소수의 97% 가량이 중국산인데 외교문제로 현재 호주산 석탄 수입을
                                 중단한 중국이 요소수 생산이 줄어들어 한국으로의 요소수 수출량을 대폭 줄였기 때문입니다.
@@ -68,9 +69,9 @@ const InfoPage = () => {
 
                 {/*두번째 탭 요소수 용도 시작*/}
                 <Tab eventKey="purpose" title="용도" className="mt-5">
-                    <h1 className="mt-5 mb-5">요소수 주요 용도</h1>
+                    <h1 className="mt-5 mb-5 text-center">요소수 주요 용도</h1>
                     <Row>
-                        <Col xs={6} md={3} className="m-0">
+                        <Col xs={6} md={3} className="m-0" >
                             <Card border="dark" style={{ width: '100%' }} >
                                 <Card.Header>디젤차량</Card.Header>
                                 <Card.Img variant="top" src={imgA} height={150} />
@@ -125,23 +126,23 @@ const InfoPage = () => {
 
                 {/*세번째 탭 요소수 수입현황 시작*/}
                 <Tab eventKey="income" title="수입현황" >
-                    <h1 className="mt-5 mb-3">요소수 최근 수입현황</h1>
+                    <h1 className="mt-5 mb-3 text-center">요소수 최근 수입현황</h1>
                     <Row>
                         <Col className="mt-5 ms-5">
-                            <img src={imgG} width={500} height={500}/>
+                            <img src={imgG} width={300} height={300} className="income_img2"/>
                         </Col>
-                        <Col className="mt-5">
-                            <h4 className="mt-5">
+                        <Col xs={12} md={6} className="mt-5">
+                            <h6 className="mt-5">
                                 한국에서 요소수는 롯데정밀화학, 휴켐스 등이 생산하고 있는데, 원료인 요소는 대부분 중국에서 들여온다.
                                 중국은 전 세계 요소의 30%를 생산한다. 중국이 요소 수출을 가장 많이 하는 국가 순위를 보면 1위 인도, 2위가 한국이다.
                                 한국에 수출하는 양은 56만4000톤, 중국 요소 수출 총량의 14%를 차지한다.
                                 한국은 전체 필요 요소수 중 66.1%를 중국에서 수입한다.
                                 특히 공업용 요소의 중국 수입 의존도는 지난해 80% 이상, 올해는 97.66%에 달한다.
                                 요소수 대란은 전 세계적 상황이지만, 중국에 전적으로 의존했던 우리나라는 직격타를 맞았다.
-                            </h4>
-                            <h5 className="mt-5">
+                            </h6>
+                            <h7 className="mt-5">
                                 출처 : SBS 뉴스
-                            </h5>
+                            </h7>
                             <hr/>
                         </Col>
                     </Row>
