@@ -58,7 +58,7 @@ variable "security_group_ids" {
 
 variable "iam_instance_profile" {
   description = "iam 이름"
-  default     = ""
+  default     = "Daeyoung"
 }
 
 // TODO: Maybe use a list instead and provision keys through cloudinit
