@@ -100,7 +100,7 @@ const MapPage = () => {
                 });
             }
             else {
-                console.err("kakao is not defined");
+                console.error("kakao is not defined");
             }
     }, [])
 
