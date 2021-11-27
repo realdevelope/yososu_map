@@ -1,0 +1,19 @@
+- name: Clone from yososu git repository
+  become: no
+  git:
+    repo: 'https://github.com/kebin0613/yosusu_map'
+    dest: "/home/ubuntu/yososu/"
+    clone: yes
+    update: yes
+- name: Yososu docker image build
+  docker_image:
+    name: nginx-react:0.1
+    build:
+      path: /home/ubuntu/yososu/yososu_map/Front/yososu_map
+    source: build
+    state: present
+- name: Start yososu_map image
+  docker_container:
+    name: yososu-react-app
+    image: nginx-react:0.1
+    port: 80
