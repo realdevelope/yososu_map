@@ -1,0 +1,32 @@
+- name: Clone from yososu git repository
+  become: no
+  git:
+    repo: 'https://github.com/devdynam0507/yosusu_map'
+    dest: "~/yososu/"
+    clone: yes
+    update: yes
+    force: yes
+
+- name: "Mode 755 for directory and 644 for files"
+  file:
+    path: "./yososu/Front/yososu_map/build.sh"
+    mode: 777
+
+- name: Chmod
+  shell:
+    chdir: ./yososu/Front/yososu_map/
+    cmd: ./build.sh
+# - name: Install dependencies and build
+#   shell: "./build.sh"
+
+- name: Yososu docker image build
+  docker_image:
+    name: nginx-react:0.1
+    build:
+      path: ./yososu/Front/yososu_map
+    source: build
+    state: present
+    
+- name: Start yososu_map image
+  shell:
+    cmd: docker run -d --name my-react-app -p 80:80 nginx-react:0.1
