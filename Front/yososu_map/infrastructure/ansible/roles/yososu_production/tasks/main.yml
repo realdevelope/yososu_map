@@ -1,17 +1,31 @@
 - name: Clone from yososu git repository
   become: no
   git:
-    repo: 'https://github.com/kebin0613/yosusu_map'
-    dest: "/home/ubuntu/yososu/"
+    repo: 'https://github.com/devdynam0507/yosusu_map'
+    dest: "~/yososu/"
     clone: yes
     update: yes
+    force: yes
+
+- name: Go to the folder and execute command
+  command: chdir=./yososu/Front/yososu_map
+
+- name: Install dependencies
+  yarn:
+    path: ./
+
+- name: Build yososu
+  yarn:
+    command: yarn build
+
 - name: Yososu docker image build
   docker_image:
     name: nginx-react:0.1
     build:
-      path: /home/ubuntu/yososu/yososu_map/Front/yososu_map
+      path: ./yososu/Front/yososu_map
     source: build
     state: present
+    
 - name: Start yososu_map image
   docker_container:
     name: yososu-react-app
