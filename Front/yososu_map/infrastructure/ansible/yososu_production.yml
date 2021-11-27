@@ -1,7 +1,0 @@
----
-- name: install the yososu app
-  hosts: yososu
-  become: yes
-
-  roles:
-     - { role: yososu_production, tags: [ 'app' ] }

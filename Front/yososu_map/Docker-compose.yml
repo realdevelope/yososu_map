@@ -1,18 +1,17 @@
-version: '3.7' 
+version: "3.7"
 
-services: 
-yososu_map: 
-  container_name: yososu_map 
-  build: 
-    context: . 
-    dockerfile: Dockerfile 
-  volumes: 
-    - '.:/app' 
-    - '/app/node_modules' 
-  ports: 
-    - '3001:3000' 
-  environment: 
-    - NODE_ENV=development 
-    - CHOKIDAR_USEPOLLING=true
-
-
+services:
+  frontend:
+    container_name: react-dockerize
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ".:/app"
+      - "/app/node_modules"
+    ports:
+      - "3001:3000"
+    environment:
+      - NODE_ENV=development
+    stdin_open: true
+    tty: true
