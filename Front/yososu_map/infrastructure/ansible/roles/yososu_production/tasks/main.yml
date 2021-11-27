@@ -7,16 +7,17 @@
     update: yes
     force: yes
 
-- name: Go to the folder and execute command
-  command: chdir=./yososu/Front/yososu_map
+- name: "Mode 755 for directory and 644 for files"
+  file:
+    path: "./yososu/Front/yososu_map/build.sh"
+    mode: 777
 
-- name: Install dependencies
-  yarn:
-    path: ./
-
-- name: Build yososu
-  yarn:
-    command: yarn build
+- name: Chmod
+  shell:
+    chdir: ./yososu/Front/yososu_map/
+    cmd: ./build.sh
+# - name: Install dependencies and build
+#   shell: "./build.sh"
 
 - name: Yososu docker image build
   docker_image:
@@ -27,7 +28,5 @@
     state: present
     
 - name: Start yososu_map image
-  docker_container:
-    name: yososu-react-app
-    image: nginx-react:0.1
-    port: 80
+  shell:
+    cmd: docker run -d --name my-react-app -p 80:80 nginx-react:0.1
