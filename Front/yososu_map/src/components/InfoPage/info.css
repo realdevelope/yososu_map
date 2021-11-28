@@ -1,26 +1,44 @@
 .income_img {
     border-radius: 30px;
-    height: 650px;
     width: 100%;
+    padding: 20px;
 }
 .income_img2 {
     border-radius: 30px;
     width: 100%;
 }
 .yososu_reason_section {
-    border: dashed 2px;
-    border-radius: 30px;
-    height: 650px;
-    width: 100%;
 }
 
 @font-face {
-    font-family: 'IBMPlexSansKR-Regular';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/IBMPlexSansKR-Regular.woff') format('woff');
+    font-family: 'EliceDigitalBaeum_Regular';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Regular.woff') format('woff');
     font-weight: normal;
     font-style: normal;
 }
 
-div{
-    font-family: 'IBMPlexSansKR-Regular';
+@font-face {
+    font-family: 'EliceDigitalBaeum_Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
 }
+
+.title{
+    font-family: 'EliceDigitalBaeum_Bold';
+}
+
+.contents{
+    font-family: 'EliceDigitalBaeum_Regular';
+    line-height: 40px;
+}
+
+.contents2{
+    font-family: 'EliceDigitalBaeum_Regular';
+}
+
+.contents3{
+    font-family: 'EliceDigitalBaeum_Regular';
+    line-height: 30px;
+}
+
