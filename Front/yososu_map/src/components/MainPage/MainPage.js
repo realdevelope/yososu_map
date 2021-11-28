@@ -1,37 +1,40 @@
-import React from 'react'
+import React, { useState, useEffect } from 'react'
 import { Image } from 'react-bootstrap';
 import Navigation from '../Navigation/Navigation';
+import "./MainPage.css";
+
 
 const MainPage = () => {
 
-    // const content = "안녕하세요 \n SSAC 3기 교육생 이상훈 입니다. \n 3기 동기 여러분들 잠시 시간 있으신가요? \n ..... \n 아껴쓰세요ㅋㅋ❤ ";
-    // const text = document.getElementById("text");
-    // let i = 0;
+    const txt = `요소수 재고, 위치, 정보, 이슈를 
+요소수 맵에서 한눈에 확인 하세요.`;
 
-    // function typing(){
-    //     let txt = content[ i++ ];
-    //     text.innerHTML += txt === "\n" ? "<br/>": txt;
-    //     console.log(text);
-        
-    //     if (i > content.length) {
-    //         text.textContent = "";
-    //         i = 0;
-    //     }
-    // }
-    // setInterval(typing, 200);
+    const [Text, setText] = useState('');
+    const [Count, setCount] = useState(0);
+    
+    useEffect(() => {
+        const interval = setInterval(() => {
+            setText(Text + txt[Count]); // 이전 set한 문자 + 다음 문자
+            setCount(Count + 1); // 개수 만큼 체크 
+        }, 100);
+
+        if(Count === txt.length)  {  // Count를 따로 두지 않고 Text.length 체크도 가능
+            clearInterval(interval); // 문자열 체크를 통해 setInterval을 해제합니다
+        }
+        return () => clearInterval(interval); // 언마운트시 setInterval을 해제합니다
+    })
 
     return (
         <div>
             <Navigation/>
-            <Image src="main.PNG" style={{height:'auto',width:'100%', paddingBottom:'50px'}}/>
-
-            {/* <div class="d-flex flex-column bd-highlight mb-3">
-                <div class="p-2 bd-highlight">
-                    <div class="text_box">
-                        <span id="text"></span><span class="blink">|</span>
-                    </div> 
+            <div class="lb-wrap">
+                <div class="lb-text">
+                    <pre id="title">{ Text }|</pre>
                 </div>
-            </div> */}
+                <div className="MemberInfo my-4">
+                    <Image src="main.PNG" style={{height:'auto',width:'100%', paddingBottom:'50px'}}/>
+                </div>
+            </div>
         </div>
     )
 }
