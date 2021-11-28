@@ -2,18 +2,28 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import NewsItem from './NewsItem';
 import axios from 'axios';
-import { Row, Col } from 'react-bootstrap';
+import { Row } from 'react-bootstrap';
 
 const NewsListBlock = styled.div`
     box-sizing: border-box;
     padding-bottom: 3rem;
-    width: 1000px;
-    margin: 0 auto;
+    margin: 6;
     margin-top: 2rem;
     @media screen and (max-width: 768px){
         width: 100%;
-        padding-left: 1rem;
-        padding-right: 1rem;
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+
+    @font-face {
+        font-family: 'EliceDigitalBaeum_Bold';
+        src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Bold.woff') format('woff');
+        font-weight: normal;
+        font-style: normal;
+    }
+
+    .section-headline {
+        font-family: 'EliceDigitalBaeum_Bold';
     }
 `;
 
@@ -27,7 +37,7 @@ const NewsList = () => {
             setLoading(true);
             try {
                 const response = await axios.get(
-                    'https://newsapi.org/v2/everything?q=요소수&sortBy=publishedAt&pageSize=3&apiKey=a4a7aca69d614cf0a5944c3ec606db96',
+                    'https://newsapi.org/v2/everything?q=요소수&sortBy=publishedAt&pageSize=4&apiKey=a4a7aca69d614cf0a5944c3ec606db96',
                 );
                 setArticles(response.data.articles);
             } catch(e) {
@@ -53,13 +63,13 @@ const NewsList = () => {
         <NewsListBlock>
             <div className="container">
                 <Row>
-                    <div className="col-md-12 col-sm-12 col-xs-12">
+                    <div className="mt-5">
                         <div className="section-headline text-center">
-                            <h2>Yososu News</h2>
+                            <h1>"Yososu News"</h1>
                         </div>
                     </div>
                 </Row>
-                <Row className="mt-5">
+                <Row className="mt-3">
                     {articles.map( article => (
                         <NewsItem key={ article.url } article={ article }/>
                     ))}
