@@ -22,7 +22,7 @@ const TeamPage = () => {
       name : 'Ryu Seungwan',
       roll : 'Web Developer',
       github : 'https://github.com/seungwanRyu01',
-      velog : 'https://velog.io/@yuuuuuuuuu'
+      velog : 'https://velog.io/@ryu0114'
     }, {
       id : 3,
       memoticon : 'img/jisu.png',
@@ -36,7 +36,7 @@ const TeamPage = () => {
       name : 'Park Taekyu',
       roll : 'Web Developer',
       github : 'https://github.com/Bigjade97',
-      velog : 'https://velog.io/@sue6e2'
+      velog : 'https://velog.io/@ptk1997'
     }
   ]
 
@@ -105,8 +105,8 @@ const TeamPage = () => {
   })
 
   return (
-    <div>
-      <h2 className="Title m-3">"Our Team Member"</h2>
+    <div className="mt-5">
+      <h1 className="Title m-3" id="About">"Our Team Member"</h1>
       <div className="MemberInfo my-4">
         <div className="row">
           {renderInfo}
