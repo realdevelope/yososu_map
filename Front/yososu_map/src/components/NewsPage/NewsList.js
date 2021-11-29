@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import NewsItem from './NewsItem';
 import axios from 'axios';
 import { Row } from 'react-bootstrap';
+import { alignPropType } from 'react-bootstrap/esm/types';
 
 const NewsListBlock = styled.div`
     box-sizing: border-box;
@@ -30,16 +31,29 @@ const NewsListBlock = styled.div`
 const NewsList = () => {
     const [articles, setArticles] = useState(null);
     const [loading, setLoading] = useState(false);
+    const client_id = 'PVEk2NtFI54kx8Dyjibd';
+    const client_secret = 'ROeiZLLqsO';
 
     useEffect(() => {
         // async를 사용하는 함수 따로 선언
         const fetchData = async () => {
             setLoading(true);
             try {
-                const response = await axios.get(
-                    'https://newsapi.org/v2/everything?q=요소수&sortBy=publishedAt&pageSize=4&apiKey=a4a7aca69d614cf0a5944c3ec606db96',
-                );
-                setArticles(response.data.articles);
+                // const response = await axios.get(
+                //     'https://newsapi.org/v2/everything?q=요소수&sortBy=publishedAt&pageSize=4&apiKey=a4a7aca69d614cf0a5944c3ec606db96',
+                // );
+                // setArticles(response.data.articles);
+                const response = await axios.get("/v1/search/news.json", {
+                    params: {
+                        query: '요소수',
+                        display: 6
+                    },
+                    headers: {
+                        'X-Naver-Client-Id': client_id,
+                        'X-Naver-Client-Secret': client_secret
+                    }
+                });
+                setArticles(response.data);
             } catch(e) {
                 console.log(e)
             }
@@ -54,7 +68,7 @@ const NewsList = () => {
     }
 
     // 아직 articles 값이 설정되지 않았을 때
-    if (!articles){
+    if (!articles) {
         return null;
     }
 
@@ -69,10 +83,13 @@ const NewsList = () => {
                         </div>
                     </div>
                 </Row>
-                <Row className="mt-3">
-                    {articles.map( article => (
+                <Row className="mt-3" style={{'textAlign':'center', 'fontWeight':'bold'}}>
+                    {/* {articles.map( article => (
                         <NewsItem key={ article.url } article={ article }/>
-                    ))}
+                    ))} */}
+                    {articles && articles.items.map( item => {
+                        return <p><a href={item.link}> {item.title} </a>{item.pubDate}</p>;
+                    })}
                 </Row>
             </div>
         </NewsListBlock>
