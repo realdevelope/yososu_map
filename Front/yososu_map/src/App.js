@@ -20,10 +20,10 @@ function App() {
               <InfoPage/>
               <NewsList />
               <TeamPage/>
-              <Footer/>
           </Col>
         </Row>
       </Container>
+      <Footer/>
     </div>
   );
 }

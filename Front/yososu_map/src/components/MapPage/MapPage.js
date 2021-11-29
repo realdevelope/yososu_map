@@ -24,17 +24,17 @@ const MapPage = () => {
 
             axios({
                 method: 'GET',
-                url: "https://api.odcloud.kr/api/15094782/v1/uddi:6b2017af-659d-437e-a549-c59788817675?page=1&perPage=109",
+                url: "https://api.odcloud.kr/api/uws/v1/inventory?page=1&perPage=109",
                 responseType: "JSON",
                 headers: {
                     Authorization: "Infuser" + " cFsf2tLOdm9hmVUm2tsKHlJwty7UFo2qiSu7UTNQudNbeSMo2vpQ5p0m2tZqPoP5qrXWXNtTw6HeqGaTElLuDg==",
-                },
+                },	                             
                 })
                 .then(function (response) {
                     //console.log(response.data.data);
             
                     // 마커 클러스터러를 생성합니다 
-                    var clusterer = new kakao.maps.MarkerClusterer({
+                    let clusterer = new kakao.maps.MarkerClusterer({
                         map: map, // 마커들을 클러스터로 관리하고 표시할 지도 객체 
                         averageCenter: true, // 클러스터에 포함된 마커들의 평균 위치를 클러스터 마커 위치로 설정 
                         minLevel: 3 // 클러스터 할 최소 지도 레벨 
@@ -55,21 +55,28 @@ const MapPage = () => {
                     }
             
                     //마커들을 묶을 변수 생성
-                    var markers =[];
-            
+                    let markers =[];
                     const data = response.data.data;
-            
-                    for (var i = 0; i < data.length; i++) {
+
+                    for (let i = 0; i < data.length; i++) {
             
                         // 지도에 마커를 생성하고 표시한다
-                        var marker = new kakao.maps.Marker({
-                        position: new kakao.maps.LatLng(data[i]['위도'], data[i]['경도']), // 마커의 좌표
+                        let marker = new kakao.maps.Marker({
+                        position: new kakao.maps.LatLng(data[i]['lat'], data[i]['lng']), // 마커의 좌표
                         map: map // 마커를 표시할 지도 객체
                         });
             
                         // 마커 위에 표시할 인포윈도우를 생성한다
-                        var infowindow = new kakao.maps.InfoWindow({
-                            content :  '<p style="padding-bottom:5px;">' + '<h4>' +  data[i]['명칭'] + '</h4>' + '<br>' + "재고량 : " + data[i]["재고량"]  +"개 " + "<br>" + "주소 : " + data[i]["주소"] + '<br>' + "전화번호 :" + data[i]["전화번호"] + '<br>'+'</p>'    // 인포윈도우에 표시할 내용
+                        let infowindow = new kakao.maps.InfoWindow({
+                            content : 
+                                `<div style="width:350px">
+                                <h4>${data[i]['name']}</h4><br>
+                                - 재고량 : ${data[i]["inventory"]}개<br>
+                                - 가격 : ${data[i]["price"]}원<br>
+                                - 주소 : ${data[i]["addr"]}<br>
+                                - 연락처 : ${data[i]["tel"]}<br>
+                                (반영시간 : ${data[i]["regDt"]})
+                                </div>`    // 인포윈도우에 표시할 내용
                         });
             
                         // 인포윈도우를 지도에 표시한다
@@ -106,13 +113,12 @@ const MapPage = () => {
 
     return (
         <div>
-            <Container>
-                <Row>
-                    <Col>
-                        <div id="map" style={{ width: "1280px", height:"700px" }}> </div>
-                    </Col>
-                </Row>
-            </Container>
+            <Row>
+                <Col>
+                    <h2 className="Title m-5" id="Map">"Yososu Map"</h2>
+                    <div id="map" style={{ width: "auto", height:"700px" }}> </div>
+                </Col>
+            </Row>
         </div>
     )
 }
