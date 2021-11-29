@@ -58,7 +58,7 @@ const MapPage = () => {
                     let markers =[];
                     const data = response.data.data;
 
-                    for (var i = 0; i < data.length; i++) {
+                    for (let i = 0; i < data.length; i++) {
             
                         // 지도에 마커를 생성하고 표시한다
                         let marker = new kakao.maps.Marker({
@@ -68,7 +68,15 @@ const MapPage = () => {
             
                         // 마커 위에 표시할 인포윈도우를 생성한다
                         let infowindow = new kakao.maps.InfoWindow({
-                            content :  '<p style="padding-bottom:5px;">' + '<h4>' +  data[i]['name'] + '</h4>' + '<br>' + "재고량 : " + data[i]["inventory"]  +"개 " + "<br>" + "주소 : " + data[i]["addr"] + '<br>' + "가격 :" + data[i]["price"] + '<br>'+'</p>'    // 인포윈도우에 표시할 내용
+                            content : 
+                                `<div style="width:350px">
+                                <h4>${data[i]['name']}</h4><br>
+                                - 재고량 : ${data[i]["inventory"]}개<br>
+                                - 가격 : ${data[i]["price"]}원<br>
+                                - 주소 : ${data[i]["addr"]}<br>
+                                - 연락처 : ${data[i]["tel"]}<br>
+                                (반영시간 : ${data[i]["regDt"]})
+                                </div>`    // 인포윈도우에 표시할 내용
                         });
             
                         // 인포윈도우를 지도에 표시한다
@@ -105,12 +113,12 @@ const MapPage = () => {
 
     return (
         <div>
-                <Row>
-                    <Col>
-                        <h2 className="Title m-5" id="Map">"Yososu Map"</h2>
-                        <div id="map" style={{ width: "auto", height:"700px" }}> </div>
-                    </Col>
-                </Row>
+            <Row>
+                <Col>
+                    <h2 className="Title m-5" id="Map">"Yososu Map"</h2>
+                    <div id="map" style={{ width: "auto", height:"700px" }}> </div>
+                </Col>
+            </Row>
         </div>
     )
 }
