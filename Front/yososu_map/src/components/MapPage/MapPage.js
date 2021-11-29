@@ -27,7 +27,7 @@ const MapPage = () => {
                 url: "https://api.odcloud.kr/api/uws/v1/inventory?page=1&perPage=109",
                 responseType: "JSON",
                 headers: {
-                    Authorization: "Infuser" + " cFsf2tLOdm9hmVUm2tsKHlJwty7UFo2qiSu7UTNQudNbeSMo2vpQ5p0m2tZqPoP5qrXWXNtTw6HeqGaTElLuDg==",
+                    Authorization: "Infuser" + "cFsf2tLOdm9hmVUm2tsKHlJwty7UFo2qiSu7UTNQudNbeSMo2vpQ5p0m2tZqPoP5qrXWXNtTw6HeqGaTElLuDg%3D%3D",
                 },	                             
                 })
                 .then(function (response) {
