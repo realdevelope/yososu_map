@@ -1,5 +1,5 @@
 import React from "react";
-import { Tabs, Tab, Row, Col, Nav, Card, Button } from 'react-bootstrap';
+import { Tabs, Tab, Row, Col, Card } from 'react-bootstrap';
 import "./info.css";
 import imgA from './img_purpose_img01.gif';
 import imgB from './img_purpose_img02.gif';

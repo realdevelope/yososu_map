@@ -109,7 +109,7 @@ const NewsList = () => {
                     </div>
                 </Row>
                 <Row className="mt-5" style={{'textAlign':'left', 'fontWeight':'bold'}}>
-                    {articles && articles.items.map( item => {
+                    {articles && articles.items.map( (item, index) => {
                         const { link, pubDate } = item;
                         const oldTitle = item.title;
                         const newTitle = oldTitle.replace(/(<([^>]+)>)/ig, "").replace(/&quot;/g,"").replace(/\"n/, "").replace(/&amp;/g, "");
@@ -117,7 +117,7 @@ const NewsList = () => {
                         const newDescript = oldDescript.replace(/(<([^>]+)>)/ig, "").replace(/&quot;/g,"").replace(/\"n/, "").replace(/&amp;/g, "");
 
                         return (
-                            <NewsItemBlock onClick={() => { window.open( link, "_blank" ) }}>
+                            <NewsItemBlock key={index} onClick={() => { window.open( link, "_blank" ) }}>
                                 <div className="contents">
                                     <h3>
                                         <div rel="noopener noreferrer" style={{'fontWeight':'bold'}}>
