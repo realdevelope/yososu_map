@@ -1,12 +1,12 @@
-import InfoPage from './Components/InfoPage/InfoPage';
+import InfoPage from './components/InfoPage/InfoPage';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import { Container, Row, Col} from "react-bootstrap";
 import React from 'react';
-import NewsList from './Components/NewsPage/NewsList'
-import MapPage from './Components/MapPage/MapPage';
-import TeamPage from './Components/TeamPage/TeamPage';
-import MainPage from './Components/MainPage/MainPage';
-import Footer from './Components/Footer/Footer';
+import NewsList from './components/NewsPage/NewsList'
+import MapPage from './components/MapPage/MapPage';
+import TeamPage from './components/TeamPage/TeamPage';
+import MainPage from './components/MainPage/MainPage';
+import Footer from './components/Footer/Footer';
 
 function App() {
   return (
