@@ -6,7 +6,7 @@ import NewsList from './Components/NewsPage/NewsList'
 import MapPage from './Components/MapPage/MapPage';
 import TeamPage from './Components/TeamPage/TeamPage';
 import MainPage from './Components/MainPage/MainPage';
-import Footer from './Components/Footer/Footer'
+import Footer from './Components/Footer/Footer';
 
 function App() {
   return (
