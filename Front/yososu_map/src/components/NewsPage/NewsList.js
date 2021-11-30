@@ -75,7 +75,7 @@ const NewsList = () => {
     // articles 값이 유효할 때
     return (
         <NewsListBlock>
-            <div className="container">
+            <div className="container" id="News">
                 <Row>
                     <div className="mt-5">
                         <div className="section-headline text-center">
