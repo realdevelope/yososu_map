@@ -1,9 +1,9 @@
 /*global kakao*/
 
 import axios from "axios";
-import { Row, Col, Container } from 'react-bootstrap'; 
+import { Row, Col } from 'react-bootstrap'; 
 import React, { useEffect } from "react";
-const { kakao } = window;
+const { kakao } = window;   //window 객체로부터 스크립트에서 로드한 kakao api를 가져와야 하기 때문에 상단에 작성
 
 const MapPage = () => {
 
@@ -115,8 +115,8 @@ const MapPage = () => {
         <div>
             <Row>
                 <Col>
-                    <h2 className="Title m-5" id="Map">"Yososu Map"</h2>
-                    <div id="map" style={{ width: "auto", height:"700px" }}> </div>
+                    <h1 className="Title m-5" id="Map">"Yososu Map"</h1>
+                    <div id="map" style={{ width: "auto", height:"500px" }}> </div>
                 </Col>
             </Row>
         </div>
