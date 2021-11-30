@@ -17,7 +17,7 @@ function App() {
             <Col>
                 <MapPage/>
                 <InfoPage/>
-                <NewsList />
+                <NewsList/>
                 <TeamPage/>
             </Col>
           </Row>
