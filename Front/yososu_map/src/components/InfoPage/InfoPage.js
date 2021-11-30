@@ -46,7 +46,7 @@ const InfoPage = () => {
     // CanvasJsChart를 이용한 원형그래프 끝
 
     return (
-        <div>
+        <div className="mt-5" id="Info">
             {/*네비게이션 시작*/}
             {/*네비게이션 끝*/}
 
