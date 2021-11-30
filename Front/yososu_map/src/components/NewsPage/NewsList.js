@@ -109,7 +109,7 @@ const NewsList = () => {
                     </div>
                 </Row>
                 <Row className="mt-5" style={{'textAlign':'left', 'fontWeight':'bold'}}>
-                    {articles && articles.items.map( (item, index) => {
+                    {articles && articles.items && articles.items.map( ( item, index ) => {
                         const { link, pubDate } = item;
                         const oldTitle = item.title;
                         const newTitle = oldTitle.replace(/(<([^>]+)>)/ig, "").replace(/&quot;/g,"").replace(/\"n/, "").replace(/&amp;/g, "");
