@@ -7,6 +7,12 @@
     border-radius: 30px;
     width: 100%;
 }
+
+.img_source {
+    font-size: 0.5em;
+    text-align: end;
+}
+
 .yososu_reason_section {
 }
 
