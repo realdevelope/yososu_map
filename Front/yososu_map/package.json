@@ -19,7 +19,7 @@
     "web-vitals": "^1.0.1",
     "yarn": "^1.22.17"
   },
-  "proxy": "https://openapi.naver.com",
+  "proxy": "http://localhost:3001",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",

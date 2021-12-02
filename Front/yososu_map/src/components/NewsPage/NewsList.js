@@ -65,8 +65,8 @@ const NewsList = () => {
     useEffect(() => {
         // async를 사용하는 함수 따로 선언
         const fetchData = async () => {
-            //setLoading(true);
-            //try {
+            // setLoading(true);
+            // try {
             //   const response = await axios.get("/v1/search/news.json", {
             //        params: {
             //            query: '요소수',
@@ -74,31 +74,21 @@ const NewsList = () => {
             //        },
             //        headers: {
             //            'X-Naver-Client-Id': client_id,
-             //           'X-Naver-Client-Secret': client_secret
+            //            'X-Naver-Client-Secret': client_secret
             //        }
             //    });
             //    setArticles(response.data);
             //    console.log(response.data);
-            //} catch(e) {
+            // } catch(e) {
             //   console.log(e)
-            //}
-            //setLoading(false);
+            // }
+            // setLoading(false);
+                axios.get('http://localhost:3001')
+                .then(response => {
+                    console.log(response);
+                })
+                .catch(err => console.error(err));
 
-            axios.get("/v1/search/news.json", {
-                params: {
-                    query: '요소수',
-                    display: 5
-                },
-                headers: {
-                    'X-Naver-Client-Id': client_id,
-                    'X-Naver-Client-Secret': client_secret
-                }
-            })
-            .then(response => {
-                setArticles(response.data)
-                console.log(response)
-            })
-            .catch(e => console.error(e));
         };
         fetchData();
     }, []);
