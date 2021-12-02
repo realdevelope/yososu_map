@@ -59,11 +59,7 @@ const NewsItemBlock = styled.div`
 const NewsList = () => {
     const [articles, setArticles] = useState(null);
     const [loading, setLoading] = useState(false);
-<<<<<<< HEAD
-    const client_id = 'PVEk2NtFI54kx8Dyjibr';
-=======
-    const client_id = 'PVEk2NtFI54kx8Dyjibb';
->>>>>>> 5bbd5c2ceffad9dfb0f40944d4dfca5ccb61c03f
+    const client_id = 'PVEk2NtFI54kx8Dyjibd';
     const client_secret = 'ROeiZLLqsO';
 
     useEffect(() => {
