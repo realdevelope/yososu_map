@@ -63,34 +63,11 @@ const NewsList = () => {
     const client_secret = 'TGRTTBx7BW';
 
     useEffect(() => {
-        // async를 사용하는 함수 따로 선언
-        const fetchData = async () => {
-            // setLoading(true);
-            // try {
-            //   const response = await axios.get("/v1/search/news.json", {
-            //        params: {
-            //            query: '요소수',
-            //            display: 5
-            //        },
-            //        headers: {
-            //            'X-Naver-Client-Id': client_id,
-            //            'X-Naver-Client-Secret': client_secret
-            //        }
-            //    });
-            //    setArticles(response.data);
-            //    console.log(response.data);
-            // } catch(e) {
-            //   console.log(e)
-            // }
-            // setLoading(false);
-                axios.get('http://localhost:3001')
-                .then(response => {
-                    console.log(response);
-                })
-                .catch(err => console.error(err));
-
-        };
-        fetchData();
+            axios.get('http://localhost:3001')
+            .then(response => {
+                console.log(response);
+            })
+            .catch(err => console.error(err));
     }, []);
 
     // 대기 중일 때
