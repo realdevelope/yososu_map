@@ -96,7 +96,7 @@ const NewsList = () => {
             })
             .then(response => {
                 setArticles(response.data)
-                console.log('resres: ' + response)
+                console.log(response)
             })
             .catch(e => console.error(e));
         };
