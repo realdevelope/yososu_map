@@ -63,7 +63,7 @@ const NewsList = () => {
     const client_secret = 'TGRTTBx7BW';
 
     useEffect(() => {
-            axios.get('http://localhost:3001')
+            axios.get('http://yososumap.ga:3001')
             .then(response => {
                 console.log(response);
             })
