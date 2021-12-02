@@ -1,7 +1,7 @@
 #!/bin/bash
 # shellcheck disable=SC2046
-#echo `yarn install`
-#echo `yarn build`
+echo `yarn install`
+echo `yarn build`
 
 docker rm $(docker stop $(docker ps -a -q --filter ancestor=api-proxy:0.1)) || notExistsUploade=false
 docker rmi api-proxy:0.1
