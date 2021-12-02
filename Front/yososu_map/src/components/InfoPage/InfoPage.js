@@ -73,6 +73,7 @@ const InfoPage = () => {
                         <Col className="mb-5 d-none d-lg-block">
                             <img src={imgF} />
                         </Col>
+                        <p className="img_source mt-3">-출처 : 네이버 지식백과-</p>
                         <hr />
                     </Row>
                 </Tab>
@@ -131,6 +132,7 @@ const InfoPage = () => {
                                 </Card.Body>
                             </Card>
                         </Col>
+                        <p className="img_source mt-3">-출처 : EUROX-</p>
                     </Row>
                     <hr />
                 </Tab>
@@ -152,9 +154,7 @@ const InfoPage = () => {
                                 특히 공업용 요소의 중국 수입 의존도는 지난해 80% 이상, 올해는 97.66%에 달한다.
                                 요소수 대란은 전 세계적 상황이지만, 중국에 전적으로 의존했던 우리나라는 직격타를 맞았다.
                             </p>
-                            <p className="mt-5">
-                                출처 : SBS 뉴스
-                            </p>
+                            <p className="img_source mt-3">-출처 : SBS 뉴스-</p>
                         </Col>
                     </Row>
                     <hr />
@@ -187,6 +187,7 @@ const InfoPage = () => {
                                 중국은 아예 요소수의 수출 검사를 의무화하기 까지 했기 때문입니다.
                             </p>
                         </Col>
+                        <p className="img_source mt-3">-출처 : 네이버 블로그-</p>
                     </Row>
                     <hr />
                 </Tab>
