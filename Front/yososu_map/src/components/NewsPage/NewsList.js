@@ -78,7 +78,8 @@ const NewsList = () => {
                     }
                 });
                 setArticles(response.data);
-                console.log(await response.json());
+                console.log(response.data);
+                console.log(articles.items);
             } catch(e) {
                 console.log(e)
             }
