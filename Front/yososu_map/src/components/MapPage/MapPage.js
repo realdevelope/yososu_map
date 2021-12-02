@@ -47,13 +47,6 @@ const MapPage = () => {
                         };
                     }
             
-                    // 인포윈도우를 닫는 클로저를 만드는 함수입니다 
-                    function makeOutListener(infowindow) {
-                        return function() {
-                            infowindow.close();
-                        };
-                    }
-            
                     //마커들을 묶을 변수 생성
                     let markers =[];
                     const data = response.data.data;
@@ -63,9 +56,9 @@ const MapPage = () => {
                         // 지도에 마커를 생성하고 표시한다
                         let marker = new kakao.maps.Marker({
                         position: new kakao.maps.LatLng(data[i]['lat'], data[i]['lng']), // 마커의 좌표
-                        map: map // 마커를 표시할 지도 객체
+                        map: map, // 마커를 표시할 지도 객체
                         });
-            
+
                         // 마커 위에 표시할 인포윈도우를 생성한다
                         let infowindow = new kakao.maps.InfoWindow({
                             content : 
@@ -76,16 +69,17 @@ const MapPage = () => {
                                 - 주소 : ${data[i]["addr"]}<br>
                                 - 연락처 : ${data[i]["tel"]}<br>
                                 (반영시간 : ${data[i]["regDt"]})
-                                </div>`    // 인포윈도우에 표시할 내용
+                                </div>`,    // 인포윈도우에 표시할 내용
+                            removable : true
                         });
-            
+
                         // 인포윈도우를 지도에 표시한다
                         //infowindow.open(map, marker);
             
                         // 생성된 마커들이 markers 변수안에 들어감  
                         markers.push(marker);
-                        kakao.maps.event.addListener(marker, 'mouseover', makeOverListener(map, marker, infowindow));
-                        kakao.maps.event.addListener(marker, 'mouseout', makeOutListener(infowindow));
+                        kakao.maps.event.addListener(marker, 'click', makeOverListener(map, marker, infowindow));
+
                         };
             
                     // 클러스터러에 마커들을 추가합니다
@@ -98,12 +92,6 @@ const MapPage = () => {
                         };
                     }
             
-                    // 인포윈도우를 닫는 클로저를 만드는 함수입니다 
-                    function makeOutListener(infowindow) {
-                        return function() {
-                            infowindow.close();
-                        };
-                    }
                 });
             }
             else {
