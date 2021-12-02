@@ -65,7 +65,7 @@ const NewsList = () => {
     useEffect(() => {
             axios.get('http://yososumap.ga:3001')
             .then(response => {
-                console.log(response);
+                setArticles(response.data);
             })
             .catch(err => console.error(err));
     }, []);
