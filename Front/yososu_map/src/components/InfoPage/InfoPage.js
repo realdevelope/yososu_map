@@ -9,7 +9,12 @@ import imgE from './yososu_img05.png';
 import imgF from './yososu_img03.png';
 import {CanvasJSChart} from "canvasjs-react-charts";
 
-
+const IMG_PURPOSE_IMG01_GIF = "https://yososu-image-bucket.s3.ap-northeast-2.amazonaws.com/img_purpose_img01.gif";
+const IMG_PURPOSE_IMG02_GIF = "https://yososu-image-bucket.s3.ap-northeast-2.amazonaws.com/img_purpose_img02.gif";
+const IMG_PURPOSE_IMG03_GIF = "https://yososu-image-bucket.s3.ap-northeast-2.amazonaws.com/img_purpose_img03.gif";
+const IMG_PURPOSE_IMG04_GIF = "https://yososu-image-bucket.s3.ap-northeast-2.amazonaws.com/img_purpose_img04.gif";
+const YOSOSU_IMG03_PNG = "https://yososu-image-bucket.s3.ap-northeast-2.amazonaws.com/yososu_img03.png";
+const YOSOSU_IMG05_PNG = "https://yososu-image-bucket.s3.ap-northeast-2.amazonaws.com/yososu_img05.png";
 
 const InfoPage = () => {
 
@@ -71,7 +76,7 @@ const InfoPage = () => {
                             </h5>
                         </Col>
                         <Col className="mb-5 d-none d-lg-block">
-                            <img src={imgF} />
+                            <img src={YOSOSU_IMG05_PNG} />
                         </Col>
                         <p className="img_source mt-3">-출처 : 네이버 지식백과-</p>
                         <hr />
@@ -86,7 +91,7 @@ const InfoPage = () => {
                         <Col xs={6} md={3} className="m-0" >
                             <Card border="dark" style={{ width: '100%' }} >
                                 <Card.Header>✔ ️디젤차량</Card.Header>
-                                <Card.Img variant="top" src={imgA} height={150} />
+                                <Card.Img variant="top" src={IMG_PURPOSE_IMG01_GIF} height={150} />
                                 <Card.Body>
                                     <Card.Title>디젤차량</Card.Title>
                                     <Card.Text>
@@ -98,7 +103,7 @@ const InfoPage = () => {
                         <Col xs={6} md={3}>
                             <Card border="dark" style={{ width: '100%' }} className="mt-5">
                                 <Card.Header>✔ 건설기계/농기계</Card.Header>
-                                <Card.Img variant="top" src={imgB} height={150} />
+                                <Card.Img variant="top" src={IMG_PURPOSE_IMG02_GIF} height={150} />
                                 <Card.Body>
                                     <Card.Title>건설기계/농기계</Card.Title>
                                     <Card.Text>
@@ -111,7 +116,7 @@ const InfoPage = () => {
                         <Col xs={6} md={3}>
                             <Card border="dark" style={{ width: '100%' }}>
                                 <Card.Header>✔ 선박</Card.Header>
-                                <Card.Img variant="top" src={imgC} height={150} />
+                                <Card.Img variant="top" src={IMG_PURPOSE_IMG03_GIF} height={150} />
                                 <Card.Body>
                                     <Card.Title>선박</Card.Title>
                                     <Card.Text>
@@ -123,7 +128,7 @@ const InfoPage = () => {
                         <Col xs={6} md={3}>
                             <Card border="dark" style={{ width: '100%' }} className="mt-5">
                                 <Card.Header>✔ 산업</Card.Header>
-                                <Card.Img variant="top" src={imgD} height={150} />
+                                <Card.Img variant="top" src={IMG_PURPOSE_IMG04_GIF} height={150} />
                                 <Card.Body>
                                     <Card.Title>산업</Card.Title>
                                     <Card.Text>
@@ -166,7 +171,7 @@ const InfoPage = () => {
                     <h1 className="mt-5 mb-3 text-center title">요소수 품귀현상</h1>
                     <Row>
                         <Col lg={4} className="mt-5 d-none d-lg-block">
-                            <img src={imgE} className="income_img"/>
+                            <img src={YOSOSU_IMG03_PNG} className="income_img"/>
                         </Col>
 
                         <Col lg={8} className="mt-5 yososu_reason_section">
