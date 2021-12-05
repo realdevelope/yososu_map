@@ -11,28 +11,28 @@ const TeamPage = () => {
   const memberInfo = [
     {
       id : 1,
-      memoticon : 'img/sanghoon.png',
+      memoticon : 'https://yososu-image-bucket.s3.ap-northeast-2.amazonaws.com/sanghoon.png',
       name : 'Lee Sanghoon',
       roll : 'Web Developer',
       github : 'https://github.com/kebin0613',
       velog : 'https://velog.io/@realdevelope'
     }, {
       id : 2,
-      memoticon : 'img/seungwan.png',
+      memoticon : 'https://yososu-image-bucket.s3.ap-northeast-2.amazonaws.com/seungwan.png',
       name : 'Ryu Seungwan',
       roll : 'Web Developer',
       github : 'https://github.com/seungwanRyu01',
       velog : 'https://velog.io/@ryu0114'
     }, {
       id : 3,
-      memoticon : 'img/jisu.png',
+      memoticon : 'https://yososu-image-bucket.s3.ap-northeast-2.amazonaws.com/jisu.png',
       name : 'Lee Jisu',
       roll : 'Web Developer',
       github : 'https://github.com/sue6e2',
       velog : 'https://velog.io/@sue6e2'
     }, {
       id : 4,
-      memoticon : 'img/taekyu.png',
+      memoticon : 'https://yososu-image-bucket.s3.ap-northeast-2.amazonaws.com/taekyu.png',
       name : 'Park Taekyu',
       roll : 'Web Developer',
       github : 'https://github.com/Bigjade97',
@@ -79,13 +79,13 @@ const TeamPage = () => {
                     <li onMouseOver = {() => setGithub(true)}
                         onMouseLeave= {() => setGithub(false)}>
                       <a id = "GithubSrc" href={info.github} target="_blank">
-                        <img className="github mx-2" src ={isGithub ? "img/github_mouseover.png" : "img/github_white.png"} width="30px" />
+                        <img className="github mx-2" src ={isGithub ? "https://yososu-image-bucket.s3.ap-northeast-2.amazonaws.com/github_mouseover.png" : "https://yososu-image-bucket.s3.ap-northeast-2.amazonaws.com/github_white.png"} width="30px" />
                       </a>
                     </li>
                     <li onMouseOver = {() => setVelog(true)}
                         onMouseLeave= {() => setVelog(false)}>
                       <a id = "VelogSrc" href={info.velog} target="_blank">
-                        <img className="velog mx-2" src = {isVelog ? "img/velog_mouseover.png" : "img/velog_white.png" } width="30px" />
+                        <img className="velog mx-2" src = {isVelog ? "https://yososu-image-bucket.s3.ap-northeast-2.amazonaws.com/velog_mouseover.png" : "https://yososu-image-bucket.s3.ap-northeast-2.amazonaws.com/velog_white.png" } width="30px" />
                       </a>
                     </li>
                   </ul>

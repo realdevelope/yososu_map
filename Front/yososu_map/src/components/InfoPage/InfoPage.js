@@ -1,12 +1,6 @@
 import React from "react";
 import { Tabs, Tab, Row, Col, Card } from 'react-bootstrap';
 import "./info.css";
-import imgA from './img_purpose_img01.gif';
-import imgB from './img_purpose_img02.gif';
-import imgC from './img_purpose_img03.gif';
-import imgD from './img_purpose_img04.gif';
-import imgE from './yososu_img05.png';
-import imgF from './yososu_img03.png';
 import {CanvasJSChart} from "canvasjs-react-charts";
 
 const IMG_PURPOSE_IMG01_GIF = "https://yososu-image-bucket.s3.ap-northeast-2.amazonaws.com/img_purpose_img01.gif";
