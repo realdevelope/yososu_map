@@ -34,13 +34,14 @@
 
 ## 🛠 기술 스택
 - 프론트 : React, react-bootstrap
+- 백앤드 : node.js - proxy(중계서버)
 - 배포 : AWS, Docker, Nginx, IaC(Terraform, Ansible), Freenom
 - 협업관리 : Notion, github
 - 툴 : vsc, cmd(ssh - ubuntu)
 - API : Kakao Map, Naver Search, 공공데이터포털(요소수)
 
 ## 배포전 영상 미리보기
-<iframe width="728" height="430" src="[https://www.youtube.com/embed/x6R2NDhTmdM](https://www.youtube.com/embed/x6R2NDhTmdM)" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/x6R2NDhTmdM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## 배포 링크
 > http://yososumap.ga/
