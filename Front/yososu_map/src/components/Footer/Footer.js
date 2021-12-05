@@ -13,7 +13,7 @@ const Footer = () => {
                     </div>
                 </div>
                 <div className="footer-copyright text-center py-2 text-white bg-black Title">© 2021 Copyright:
-                    <a className="text-white Title" href="https://github.com/kebin0613/SSAC_Team/" style={{ textDecorationLine : 'none' }}> SSAC Team</a>
+                    <a className="text-white Title" href="https://github.com/kebin0613/SSAC_Team/" style={{ textDecorationLine : 'none' }}> 벨루가</a>
                 </div>
 
             </footer>

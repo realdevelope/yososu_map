@@ -28,3 +28,5 @@ infrastructure/.terraform
 terraform.tfstate
 terraform.tfstate.backup
 .terraform.lock.hcl
+
+yarn.lock
