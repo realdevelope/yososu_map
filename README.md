@@ -2,7 +2,7 @@
 ![thumbnail](https://user-images.githubusercontent.com/48710889/144761063-ebe2db90-6ba5-417e-be81-655def93dc30.PNG)
 
 
->📢 요소수 판매처와 재고, 정보, 최신뉴스를 Yososu Map에서 한눈에 확인할 수 있습니다. 많은 이용바랍니다.💗 http://yososumap.ga/
+>📢 요소수 판매처와 재고, 정보, 최신뉴스를 Yososu Map에서 한눈에 확인할 수 있습니다. <br>많은 이용바랍니다.💗 http://yososumap.ga/
 
 <br>
 
