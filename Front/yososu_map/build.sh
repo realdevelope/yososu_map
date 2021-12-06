@@ -3,7 +3,7 @@
 echo `yarn install`
 echo `yarn build`
 
-docker rm $(docker stop $(docker ps -a -q —filter ancestor=nginx-react:0.1)) || notExistsUploade=false
+docker rm -f $(docker ps -qa) || notExistsUploade=false
 docker rmi nginx-react:0.1
 
 echo "build react image"

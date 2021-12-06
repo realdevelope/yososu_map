@@ -26,4 +26,4 @@ EXPOSE 80
 CMD ["nginx", "-g", "daemon off;"]
 
 # Docker image 빌드 -> $ docker build -t nginx-react:0.1 .
-# Docker 띄우기 -> $ docker run -d —name my-react-app -p 80:80 nginx-react:0.1
+# Docker 띄우기 -> $ docker run -d my-react-app -p 80:80 nginx-react:0.1
