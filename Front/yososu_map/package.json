@@ -19,7 +19,7 @@
     "web-vitals": "^1.0.1",
     "yarn": "^1.22.17"
   },
-  "proxy": "http://yososumap.ga:3001",
+  "proxy": "http:/3.36.253.143:3001",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
