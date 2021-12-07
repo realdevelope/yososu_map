@@ -70,7 +70,7 @@ const InfoPage = () => {
                             </h5>
                         </Col>
                         <Col className="mb-5 d-none d-lg-block">
-                            <img src={YOSOSU_IMG05_PNG} />
+                            <img src={YOSOSU_IMG03_PNG} />
                         </Col>
                         <p className="Img_source mt-3">-출처 : 네이버 지식백과-</p>
                         <hr />
@@ -165,7 +165,7 @@ const InfoPage = () => {
                     <h1 className="mt-5 mb-3 text-center Title">요소수 품귀현상</h1>
                     <Row>
                         <Col lg={4} className="mt-5 d-none d-lg-block">
-                            <img src={YOSOSU_IMG03_PNG} className="Income_img"/>
+                            <img src={YOSOSU_IMG05_PNG} className="income_img"/>
                         </Col>
 
                         <Col lg={8} className="mt-5 Yososu_reason_section">
