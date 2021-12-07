@@ -61,3 +61,23 @@ Lee Ji soo
         height: 600px;
     }
 }
+
+/*
+sanghoon
+*/
+
+.Box {
+    position: relative;
+}
+
+.MainImg {
+    width: 100%;
+    position: relative;
+}
+
+.TextBox {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    color: white;
+}
