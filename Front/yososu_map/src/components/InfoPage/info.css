@@ -1,19 +1,23 @@
-.income_img {
+/*
+Tae Kyu Park
+*/
+
+.Income_img {
     border-radius: 30px;
     width: 100%;
     padding: 20px;
 }
-.income_img2 {
+.Income_img2 {
     border-radius: 30px;
     width: 100%;
 }
 
-.img_source {
+.Img_source {
     font-size: 0.5em;
     text-align: end;
 }
 
-.yososu_reason_section {
+.Yososu_reason_section {
 }
 
 @font-face {
@@ -30,20 +34,20 @@
     font-style: normal;
 }
 
-.title{
+.Title{
     font-family: 'EliceDigitalBaeum_Bold';
 }
 
-.contents{
+.Contents{
     font-family: 'EliceDigitalBaeum_Regular';
     line-height: 40px;
 }
 
-.contents2{
+.Contents2{
     font-family: 'EliceDigitalBaeum_Regular';
 }
 
-.contents3{
+.Contents3{
     font-family: 'EliceDigitalBaeum_Regular';
     line-height: 30px;
 }

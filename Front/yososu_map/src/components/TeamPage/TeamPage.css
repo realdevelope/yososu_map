@@ -1,3 +1,7 @@
+/*
+Lee Ji soo
+*/
+
 @font-face {
     font-family: 'EliceDigitalBaeum_Regular';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Regular.woff') format('woff');
@@ -11,6 +15,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 .Title{
     font-family: 'EliceDigitalBaeum_Bold';
     text-align: center;
@@ -61,7 +66,7 @@
     z-index: 500;
 }
 
-.MemberInfo .discribe ul{
+.MemberInfo .Describe ul{
     list-style-type: none;
     padding-left: 0;
 

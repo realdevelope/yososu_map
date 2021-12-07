@@ -1,3 +1,7 @@
+/*
+Lee Ji soo
+*/
+
 @font-face {
     font-family: 'EliceDigitalBaeum_Regular';
     src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/EliceDigitalBaeum_Regular.woff') format('woff');
@@ -11,6 +15,7 @@
     font-weight: normal;
     font-style: normal;
 }
+
 .Title1{
     font-family: 'EliceDigitalBaeum_Bold';
 }
@@ -20,6 +25,7 @@
     word-break: keep-all;
 }
 
+/*반응형 구현*/
 @media screen and (min-width: 2385px) {
     .Title1 {
         font-size: 48px;
@@ -75,4 +81,3 @@ sanghoon
     left: 5%;
     color: white;
 }
-

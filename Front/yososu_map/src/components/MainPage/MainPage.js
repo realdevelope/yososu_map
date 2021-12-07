@@ -11,7 +11,8 @@ const MainPage = () => {
     return (
         <div>
             <Navigation/>
-            <div className="text-wrap boX">
+
+            <div className="text-wrap box">
                 <Image className="MainImg" src="main.PNG"/>
                 <div className="col-xs-12 col-sm-12 col-md-8 col-xl-4 TextBox">
                     <p className="Title1 m-2 mb-3">요소수 판매처와 재고, 정보, 최신뉴스를 <span>Yososu Map에서</span> 한눈에 확인 하세요!</p>
