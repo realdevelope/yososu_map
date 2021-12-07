@@ -1,8 +1,11 @@
-const express = require('express');
+/*
+    Ryu Seung Wan
+*/
+
 const request = require('request');
+const express = require('express');
 const cors = require('cors');
 const app = express();
-
 
 const client_id = 'ayB_b2TmQFkzpz0XuIwN';
 const client_secret = 'TGRTTBx7BW';
@@ -11,6 +14,7 @@ const searchParamOptions = {
     display: 5
 };
 
+// node.js 내의 cors 미들웨어 호출
 app.use(cors());
 app.set('port', process.env.PORT || '3001');
 
