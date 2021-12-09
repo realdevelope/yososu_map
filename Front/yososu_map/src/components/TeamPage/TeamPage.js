@@ -1,3 +1,6 @@
+/*
+Lee Ji Soo
+*/
 
 import React, { useState } from "react";
 import './TeamPage.css'
@@ -42,6 +45,7 @@ const TeamPage = () => {
 
   const renderInfo = memberInfo.map(info =>{
 
+    // 소셜 아이콘 보이기
     const showIcon = (props) =>{
       console.log(props);
       if(props === info.id){
@@ -51,6 +55,7 @@ const TeamPage = () => {
       }
     }
 
+    // 소셜 아이콘 숨기기
     const hideIcon = (props) =>{
       if(props === info.id){
         document.getElementById(`Member${props}`).style.opacity = '0';
@@ -79,13 +84,13 @@ const TeamPage = () => {
                     <li onMouseOver = {() => setGithub(true)}
                         onMouseLeave= {() => setGithub(false)}>
                       <a id = "GithubSrc" href={info.github} target="_blank">
-                        <img className="github mx-2" src ={isGithub ? "https://yososu-image-bucket.s3.ap-northeast-2.amazonaws.com/github_mouseover.png" : "https://yososu-image-bucket.s3.ap-northeast-2.amazonaws.com/github_white.png"} width="30px" />
+                        <img className="mx-2" src ={isGithub ? "https://yososu-image-bucket.s3.ap-northeast-2.amazonaws.com/github_mouseover.png" : "https://yososu-image-bucket.s3.ap-northeast-2.amazonaws.com/github_white.png"} width="30px" />
                       </a>
                     </li>
                     <li onMouseOver = {() => setVelog(true)}
                         onMouseLeave= {() => setVelog(false)}>
                       <a id = "VelogSrc" href={info.velog} target="_blank">
-                        <img className="velog mx-2" src = {isVelog ? "https://yososu-image-bucket.s3.ap-northeast-2.amazonaws.com/velog_mouseover.png" : "https://yososu-image-bucket.s3.ap-northeast-2.amazonaws.com/velog_white.png" } width="30px" />
+                        <img className="mx-2" src = {isVelog ? "https://yososu-image-bucket.s3.ap-northeast-2.amazonaws.com/velog_mouseover.png" : "https://yososu-image-bucket.s3.ap-northeast-2.amazonaws.com/velog_white.png" } width="30px" />
                       </a>
                     </li>
                   </ul>
@@ -93,7 +98,7 @@ const TeamPage = () => {
               </div>
             </div>
           </div>
-          <div className = "discribe my-3">
+          <div className = "Describe my-3">
             <ul>
               <li className="m-2 Title">💎 {info.name}</li>
               <li className="m-2">💻 {info.roll}</li>
