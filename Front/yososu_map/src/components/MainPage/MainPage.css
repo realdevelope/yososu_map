@@ -45,6 +45,10 @@ Lee Ji soo
         font-size: 30px;
         word-break: keep-all;
     }
+    .Title2{
+        font-size: 18px;
+        word-break: keep-all;
+    }
 }
 
 @media screen and  (max-width: 893px) {
