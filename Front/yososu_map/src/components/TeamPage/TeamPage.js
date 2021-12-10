@@ -47,11 +47,9 @@ const TeamPage = () => {
 
     // 소셜 아이콘 보이기
     const showIcon = (props) =>{
-      console.log(props);
       if(props === info.id){
         var target = document.getElementById(`Member${props}`);
         target.style.opacity = '1';
-        console.log(target);
       }
     }
 
