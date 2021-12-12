@@ -108,8 +108,10 @@ const TeamPage = () => {
   })
 
   return (
-    <div className="mt-5">
-      <h1 className="Title m-3" id="About">"Our Team Member"</h1>
+    <div className="mt-5" id="About">
+      <br></br>
+      <br></br>
+      <h1 className="Title m-3" >"Our Team Member"</h1>
       <div className="MemberInfo my-4">
         <div className="row">
           {renderInfo}

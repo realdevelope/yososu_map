@@ -49,6 +49,9 @@ const InfoPage = () => {
 
     return (
         <div className="mt-5" id="Info">
+            <br></br>
+            <br></br>
+            <br></br>
             {/*탭 기능구현 내가한거 시작*/}
             <Tabs
                 defaultActiveKey="income"
