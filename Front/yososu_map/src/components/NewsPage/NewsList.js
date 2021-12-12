@@ -6,7 +6,7 @@ import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import axios from 'axios';
 
-// NewsListBlock 태그를 생성하고 그 안에서 사용할 css양식들을 정의
+/* NewsListBlock 태그를 생성하고 그 안에서 사용할 css양식들을 정의 */
 const NewsListBlock = styled.div`
     box-sizing: border-box;
     padding-bottom: 3rem;
@@ -30,7 +30,7 @@ const NewsListBlock = styled.div`
     }
 `;
 
-// NewsItemBlock 태그를 생성하고 그 안에서 사용할 css양식들을 정의
+/* NewsItemBlock 태그를 생성하고 그 안에서 사용할 css양식들을 정의 */
 const NewsItemBlock = styled.div`
     display: flex;
     box-shadow: 0 1px 10px rgba(0,0,0,0.5);
@@ -83,13 +83,15 @@ const NewsList = () => {
     // articles 값이 유효할 때
     return (
         <NewsListBlock id="News">
+            <br></br>
+            <br></br>
             <div className="container">
-                <div className="Row mt-5">
+                <div className="row mt-5">
                     <div className="section-headline text-center">
                         <h1>"Yososu News"</h1>
                     </div>
                 </div>
-                <div className="Row mt-5" style={{'textAlign':'left', 'fontWeight':'bold'}}>
+                <div className="row mt-5" style={{'textAlign':'left', 'fontWeight':'bold'}}>
                     {articles && articles.items && articles.items.map( ( item, index ) => {
                         // 네이버 api 내부에 있던 item.link, item.pubDate 변수 불러오기 
                         const { link, pubDate } = item;

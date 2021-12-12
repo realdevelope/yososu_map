@@ -104,10 +104,12 @@ const MapPage = () => {
     }, [])
 
     return (
-        <div>
+        <div id="Map">
+            <br></br>
+            <br></br>
             <Row>
                 <Col>
-                    <h1 className="Title m-5" id="Map">"Yososu Map"</h1>
+                    <h1 className="title m-5">"Yososu Map"</h1>
                     <div id="map" style={{ width: "auto", height:"500px" }}> </div>
                 </Col>
             </Row>
