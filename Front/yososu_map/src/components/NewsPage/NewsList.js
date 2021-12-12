@@ -84,12 +84,12 @@ const NewsList = () => {
     return (
         <NewsListBlock id="News">
             <div className="container">
-                <div className="row mt-5">
+                <div className="Row mt-5">
                     <div className="section-headline text-center">
                         <h1>"Yososu News"</h1>
                     </div>
                 </div>
-                <div className="row mt-5" style={{'textAlign':'left', 'fontWeight':'bold'}}>
+                <div className="Row mt-5" style={{'textAlign':'left', 'fontWeight':'bold'}}>
                     {articles && articles.items && articles.items.map( ( item, index ) => {
                         // 네이버 api 내부에 있던 item.link, item.pubDate 변수 불러오기 
                         const { link, pubDate } = item;
