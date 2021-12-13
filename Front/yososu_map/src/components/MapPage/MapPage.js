@@ -109,7 +109,7 @@ const MapPage = () => {
             <br></br>
             <Row>
                 <Col>
-                    <h1 className="title m-5 text-center">"Yososu Map"</h1>
+                    <h1 className="Title m-3 text-center">"Yososu Map"</h1>
                     <div id="map" style={{ width: "auto", height:"500px" }}> </div>
                 </Col>
             </Row>
